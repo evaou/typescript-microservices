@@ -12,6 +12,8 @@
     // infra/k8s/ingress-srv.yaml
     $ vim /etc/hosts
 
+    $ npm install express-validator
+
 ## Run
 
     // infra/k8s/auth-depl.yaml
@@ -45,3 +47,4 @@
 
 - Skip HTTPS warning in chrome
   - type `thisisunsafe` anywhere in page
+- leverage [npm libraries](https://www.npmjs.com/)
