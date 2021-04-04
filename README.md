@@ -16,6 +16,8 @@
 
     $ npm install express-async-errors
 
+    $ npm install mongoose
+
 ## Run
 
     // infra/k8s/auth-depl.yaml
