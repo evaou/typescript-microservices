@@ -14,6 +14,8 @@
 
     $ npm install express-validator
 
+    $ npm install express-async-errors
+
 ## Run
 
     // infra/k8s/auth-depl.yaml
