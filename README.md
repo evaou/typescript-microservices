@@ -17,6 +17,7 @@
     $ npm install express-async-errors
 
     $ npm install mongoose
+    $ npm install @types/mongoose
 
 ## Run
 
