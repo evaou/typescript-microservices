@@ -19,6 +19,9 @@
     $ npm install mongoose
     $ npm install @types/mongoose
 
+    $ npm install cookie-session
+    $ npm install @types/cookie-session
+
 ## Run
 
     // infra/k8s/auth-depl.yaml
@@ -65,6 +68,7 @@
 |   Automatically managed by browser   |            Manage manually             |
 
 ### Cookie
+
 - not encrypt Cookie data for cross-language handling
 
 ### JWT
@@ -72,7 +76,6 @@
 - Json Web Token
 - in Headers Authorization or Cookie
 - in Body token
-
 
 ### SSR
 
