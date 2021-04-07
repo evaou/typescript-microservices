@@ -53,3 +53,30 @@
 - Skip HTTPS warning in chrome
   - type `thisisunsafe` anywhere in page
 - leverage [npm libraries](https://www.npmjs.com/)
+
+## Term
+
+### Cookie vs JWT
+
+|                Cookie                |                  JWT                   |
+| :----------------------------------: | :------------------------------------: |
+|         Transport mechanism          | Authentication/Authorization mechanism |
+| Move data between browser and server |               Store data               |
+|   Automatically managed by browser   |            Manage manually             |
+
+### Cookie
+- not encrypt Cookie data for cross-language handling
+
+### JWT
+
+- Json Web Token
+- in Headers Authorization or Cookie
+- in Body token
+
+
+### SSR
+
+- Server Side Rendering
+- return a rendered HTML file
+- good for SEO
+- need to know auth info with the first reqeust
