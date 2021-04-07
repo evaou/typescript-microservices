@@ -16,11 +16,10 @@
 
     $ npm install express-async-errors
 
-    $ npm install mongoose
-    $ npm install @types/mongoose
+    $ npm install mongoose @types/mongoose
 
-    $ npm install cookie-session
-    $ npm install @types/cookie-session
+    $ npm install cookie-session @types/cookie-session
+    $ npm install jsonwebtoken @types/jsonwebtoken
 
 ## Run
 
