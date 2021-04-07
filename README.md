@@ -55,6 +55,14 @@
 - Skip HTTPS warning in chrome
   - type `thisisunsafe` anywhere in page
 - leverage [npm libraries](https://www.npmjs.com/)
+- [base64 decode and encode](https://www.base64decode.org/)
+- [jwt.io](https://jwt.io/ to )
+  - decode and generate JWT
+  - use JWT signing key to verify JWT
+- create secret
+
+  $ kubectl create secret generic jwt-secret --from-literal=JWT_KEY=\<JWT-signing-key\>\
+  $ kubectl get secret
 
 ## Term
 
