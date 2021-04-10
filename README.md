@@ -56,6 +56,12 @@
 
     $ npm run test
 
+## Client Setup
+
+    $ cd client
+    $ npm init -y
+    $ npm install react react-dom next
+
 ## Tip
 
 - Skip HTTPS warning in chrome
