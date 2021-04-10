@@ -68,6 +68,8 @@
 
     $ npm install bootstrap
 
+    $ npm install axios
+
 ## Layers between Browser and Auth Service
 
 ingress-nginx (handle initial routing) > cluster-ip service (inside cluster) > pod (run containers) > express application (inside container, route request to a request handler)
