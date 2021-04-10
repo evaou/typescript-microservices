@@ -70,9 +70,46 @@
 
     $ npm install axios
 
-## Layers between Browser and Auth Service
+## Traffic Flow
 
-ingress-nginx (handle initial routing) > cluster-ip service (inside cluster) > pod (run containers) > express application (inside container, route request to a request handler)
+browser > computer networking layer > ingress-nginx (handle initial routing, ingress-nginx namespace) > cluster-ip service (inside cluster, default namespace) > pod (run containers) > express application (inside container, route request to a request handler)
+
+1. browser
+
+2. **computer** networking layer
+
+   - translate _ticketing.dev_ to localhost:80
+
+3. ingress-nginx
+
+   - send request to default handler, client application
+
+4. client application (Next JS)
+
+   - check on path and decide to show root route
+   - send request to **container** networking layer
+   - build and send back fully rendered HTML file to browser
+
+5. browser (React + Axios)
+
+   - make a request with route path and by default use current domain _ticketing.dev_
+
+6. ingress-nginx
+
+   - send reqeust to auth application
+
+### Cross Namespace Communication
+
+    $ kubectl get namespaces
+
+    // under default namespace
+    $ kubectl get services
+
+    $ kubectl get services -n ingress-nginx
+
+http://NAMEOFSERVICE.NAMESPACE.svc.cluster.local
+
+- e.g. http://ingress-nginx-controller.ingress-nginx.svc.cluster.local
 
 ## Tip
 
@@ -119,3 +156,8 @@ ingress-nginx (handle initial routing) > cluster-ip service (inside cluster) > p
 - return a rendered HTML file
 - good for SEO
 - need to know auth info with the first reqeust
+
+### Kubernetes namespace
+
+- create object under specific namespace
+- like a sandbox
