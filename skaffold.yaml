@@ -11,11 +11,19 @@ build:
   #   projectId: ticketing-dev-309509
   artifacts:
     - image: evaou/auth
-    # - image: us.gcr.io/ticketing-dev-309509/auth
+      # - image: us.gcr.io/ticketing-dev-309509/auth
       context: auth
       docker:
         dockerfile: Dockerfile
       sync:
         manual:
           - src: 'src/**/*.ts'
+            dest: .
+    - image: evaou/client
+      context: client
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: '**/*.js'
             dest: .
