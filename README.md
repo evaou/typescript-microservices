@@ -53,7 +53,6 @@
 ## Test
 
     $ npm install --save-dev @types/jest @types/supertest jest ts-jest supertest mongodb-memory-server
-
     $ npm run test
 
 ## Client Setup
@@ -61,6 +60,13 @@
     $ cd client
     $ npm init -y
     $ npm install react react-dom next
+
+    $ docker build -t evaou/client .
+    $ docker push evaou/client
+
+    $ skaffold dev
+
+    $ npm install bootstrap
 
 ## Tip
 
@@ -75,6 +81,11 @@
 
   $ kubectl create secret generic jwt-secret --from-literal=JWT_KEY=\<JWT-signing-key\>\
   $ kubectl get secret
+
+- have next pod apply config
+
+  $ kubectl get pods
+  $ kubectl delete pod <next-service-pod-name>
 
 ## Term
 
