@@ -138,6 +138,9 @@ e.g. http://ingress-nginx-controller.ingress-nginx.svc.cluster.local
    $ npm version patch
    $ npm run build
    $ npm publish
+
+   $ npm install express express-validator cookie-session jsonwebtoken @types/cookie-session @types/express @types/jsonwebtoken
+   $ tsc
    ```
 
 ## Tip
