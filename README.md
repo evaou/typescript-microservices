@@ -141,12 +141,17 @@ e.g. http://ingress-nginx-controller.ingress-nginx.svc.cluster.local
 
    $ npm install express express-validator cookie-session jsonwebtoken @types/cookie-session @types/express @types/jsonwebtoken
    $ tsc
+
+   $ npm run pub
    ```
 
 3. auth service
 
    ```
+   $ cd auth
    $ npm install @<npm-org-name>/common
+
+   $ npm update @<npm-org-name>/common
    ```
 
 ## Tip
