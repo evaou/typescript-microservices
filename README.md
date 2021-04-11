@@ -100,6 +100,10 @@ browser > computer networking layer > ingress-nginx (handle initial routing, ing
 
 ### Cross Namespace Communication
 
+http://NAMEOFSERVICE.NAMESPACE.svc.cluster.local
+
+e.g. http://ingress-nginx-controller.ingress-nginx.svc.cluster.local
+
     $ kubectl get namespaces
 
     // under default namespace
@@ -107,9 +111,27 @@ browser > computer networking layer > ingress-nginx (handle initial routing, ing
 
     $ kubectl get services -n ingress-nginx
 
-http://NAMEOFSERVICE.NAMESPACE.svc.cluster.local
+## Common Setup
 
-- e.g. http://ingress-nginx-controller.ingress-nginx.svc.cluster.local
+1. Add organization in [npmjs](https://www.npmjs.com/)
+2. command
+
+   ```
+   $ mkdir common
+   $ cd common
+
+   $ npm init -y
+
+   $ vim package.json
+   // "name": "@<npm-org-name>/common",
+
+   $ git init
+   $ git add .
+   $ git commit -m "initial commit"
+
+   $ npm login
+   $ npm publish --access public
+   ```
 
 ## Tip
 
