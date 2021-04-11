@@ -134,6 +134,10 @@ e.g. http://ingress-nginx-controller.ingress-nginx.svc.cluster.local
 
    $ tsc --init
    $ npm install typescript del-cli --save-dev
+
+   $ npm version patch
+   $ npm run build
+   $ npm publish
    ```
 
 ## Tip
