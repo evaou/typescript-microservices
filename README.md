@@ -143,6 +143,12 @@ e.g. http://ingress-nginx-controller.ingress-nginx.svc.cluster.local
    $ tsc
    ```
 
+3. auth service
+
+   ```
+   $ npm install @<npm-org-name>/common
+   ```
+
 ## Tip
 
 - Skip HTTPS warning in chrome
