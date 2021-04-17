@@ -186,6 +186,15 @@ e.g. http://ingress-nginx-controller.ingress-nginx.svc.cluster.local
 ### Cookie
 
 - not encrypt Cookie data for cross-language handling
+- in headers, cookie: express-sess:\<cookie\>
+  - decode cookie in [base64 decode](https://www.base64decode.org/)
+  - {"jwt": \<json-web-token\>}
+- creation
+  1.  build a JWT payload, { id, email }
+  2.  create the JWT
+  3.  build session object, { jwt: JWT }
+  4.  turn the session into JSON
+  5.  encode JSON as base64
 
 ### JWT
 
