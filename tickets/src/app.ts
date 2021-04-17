@@ -1,7 +1,7 @@
 import express from 'express';
 import 'express-async-errors';
 import { json } from 'body-parser';
-import { errorHandler, NotFoundError } from '@opptickets/common';
+import { errorHandler, NotFoundError, currentUser } from '@opptickets/common';
 import cookieSession from 'cookie-session';
 import { createTicketRouter } from './routes/new';
 
@@ -14,6 +14,7 @@ app.use(
     secure: process.env.NODE_ENV !== 'testing',
   })
 );
+app.use(currentUser);
 
 app.use(createTicketRouter);
 
