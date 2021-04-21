@@ -154,6 +154,24 @@ e.g. http://ingress-nginx-controller.ingress-nginx.svc.cluster.local
    $ npm update @<npm-org-name>/common
    ```
 
+## [NATS Streaming Server](https://docs.nats.io/)
+
+- built on top of NATS, advanced implementation
+  - NATS: basic implementation of event sharing
+- search image on [docker hub](https://hub.docker.com/)
+- search client npm, node-nats-streaming on [npmjs](https://www.npmjs.com/)
+- step
+  1. create channels in NATS Streaming
+  2. services subscribe to channels
+  3. services publish events to specific channels
+
+### Setup
+
+      $ npm init -y
+      $ npm install node-nats-streaming ts-node-dev typescript @types/node
+
+      $ tsc --init
+
 ## Tip
 
 - Skip HTTPS warning in chrome
